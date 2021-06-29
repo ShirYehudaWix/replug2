@@ -15,6 +15,7 @@ export const MainViewPackage: EntryPoint[] = [{
     },
 
     extend(shell) {
-        shell.contributeMainView(shell, () => <MainViewComponent slot={shell.getSlot(componentsSlotKey)}/>)
+        shell.contributeMainView(shell, () => <MainViewComponent
+            slot={shell.getSlot(componentsSlotKey)}/>)
     }
 }]
