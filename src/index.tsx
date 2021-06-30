@@ -7,11 +7,13 @@ import { createAppHost, AppMainView } from 'repluggable';
 import { HelloWorldPackage } from './packages/helloWorld';
 import {TopBarPackage} from "./packages/topBar";
 import { MainViewPackage } from './packages/mainView';
+import {CounterPackage} from "./packages/counter";
 
 const host = createAppHost([
     MainViewPackage,
     // HelloWorldPackage,
-    TopBarPackage
+    TopBarPackage,
+    CounterPackage
 ]);
 
 ReactDOM.render(<AppMainView host={host} />, document.getElementById('root'));
