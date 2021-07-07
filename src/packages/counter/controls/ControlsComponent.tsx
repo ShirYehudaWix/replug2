@@ -1,10 +1,14 @@
 import React, {FunctionComponent, useState} from 'react';
 import style from "../counterSytle.module.css"
 import {Button2} from "./Button/Button2";
+interface ControlsProps{
+    increase:()=>void,
+    decrease:()=>void
+}
+export const Controls = () => {
+const increase:()=>void=()=>{
 
-export const Controls: FunctionComponent = () => {
-const [count,setCount]=useState(0)
-
+    }
  return   (
 
         <div className={style.controls}>
@@ -12,8 +16,8 @@ const [count,setCount]=useState(0)
                 this is my controls
             </div>
 
-            <Button2  >+</Button2>
-            <Button2  >-</Button2>
+            <button onClick={increase} >+</button>
+            <button  >-</button>
 
         </div>
     );

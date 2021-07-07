@@ -1,6 +1,6 @@
 import style from "../../App.module.css"
 import {ButtonDispatchProps, ButtonProps, ButtonStateProps, DispatchType} from "../../types/types";
-import {MINUS, PLUS} from "../../store/actionTypes";
+import {DECREASE, INCREASE} from "../../store/actionTypes";
 import {connect} from "react-redux";
 import {connectWithShell, Shell} from "repluggable";
 import React from "react";
@@ -24,7 +24,7 @@ return{}
 const mapDispatchToProps = (shell: Shell, dispatch: DispatchType) => {
     return {
         setCount(sign: string) {
-            dispatch({type: sign === "+" ? PLUS : MINUS})
+            dispatch({type: sign === "+" ? INCREASE : DECREASE})
         }
     }
 }
